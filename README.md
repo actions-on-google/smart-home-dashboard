@@ -5,10 +5,11 @@ data that is stored in it.
 
 The app can be installed to Google App Engine or any Java Web Server.
 
-## Requirements
-* A JavaScript Web Token by following this guide
+Make sure to follow [this guide](https://developers.google.com/actions/smarthome/report-state) to get a service account key
 
-## Build client
+You can add a Giphy [API key](https://developers.giphy.com/docs/) to `giphy.service.ts` to get animated images for each device type
+
+### Build client
 
 First you need to build the web frontend that you will interact with:
 

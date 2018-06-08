@@ -1,0 +1,54 @@
+<!--
+ * Copyright 2018 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+<mat-card>
+  <mat-card-header>Device List</mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let device of devices" style="min-height:60px"
+        [ngStyle]="{'background-color':device.updated ? 'green' : '#424242' }">
+
+        <img mat-list-avatar src="{{device.giphyUrl}}" alt="{{device.name}}">
+        <h3 mat-line class='device-name'>{{device.name}}</h3>
+        <mat-divider></mat-divider>
+
+        <mat-list-item *ngFor="let state of device.state">
+          <p matSubheader>{{ state }}</p>
+        </mat-list-item>
+
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+
+  <button mat-fab color="primary" (click)="refresh()">Refresh</button>
+
+  <mat-card-footer [ngStyle]="{'background-color': 'white'}">
+    <h6 [ngStyle]="{'color': 'black'}">Delta:</h6>
+    <pre style='color:black'>{{debugDelta}}</pre>
+    <h6 [ngStyle]="{'color': 'black'}">Request:</h6>
+    <pre style='color:black'>{{debugRequest}}</pre>
+    <h6 [ngStyle]="{'color': 'black'}">Response:</h6>
+    <pre style='color:black'>{{debugResponse}}</pre>
+  </mat-card-footer>
+
+  <style>
+    img.mat-list-avatar {
+      width: 40px;
+      height: 40px;
+      min-width: inherit;
+      border-radius: 100%;
+    }
+  </style>
+</mat-card>
