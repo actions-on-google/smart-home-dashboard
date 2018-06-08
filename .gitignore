@@ -1,0 +1,7 @@
+# Deployment files
+/target
+# Compiled files
+/src/main/webapp
+# Pulled-in dependencies
+/src/main/ngapp/node_modules
+/src/main/ngapp/package-lock.json
