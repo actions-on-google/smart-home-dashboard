@@ -9,6 +9,8 @@ Make sure to follow [this guide](https://developers.google.com/actions/smarthome
 
 You can add a Giphy [API key](https://developers.giphy.com/docs/) to `giphy.service.ts` to get animated images for each device type
 
+## Setup
+
 ### Build client
 
 First you need to build the web frontend that you will interact with:
@@ -20,9 +22,9 @@ npm run build
 # Built files will be added in src/main/webapp
 ```
 
-## Build server
+### Build server
 
-### Using Google App Engine
+#### Using Google App Engine
 To set up your instance:
 
 1. Use the Google Cloud Console to create a [new App Engine application](https://console.cloud.google.com/projectselector/appengine/create?lang=java&st=true&_ga=2.118087439.-783977692.1527806171)
@@ -56,7 +58,7 @@ gcloud components update
 
 Read the documentation on [App Engine](https://cloud.google.com/appengine/docs/standard/java/quickstart) to learn more.
 
-### Other Java Web Servers
+#### Other Java Web Servers
 To install on any other Java Web Server:
 
 `mvn clean package`
@@ -68,6 +70,11 @@ To run with embedded tomcat:
 `mvn clean package`
 
 Then run `java -jar [artifact_name].jar` from `target/`
+
+## Build from source
+To build from the source files:
+1. Download the [home graph protos](https://github.com/googleapis/googleapis/tree/master/google/home/graph/v1) to `src/main/proto`
+1. Download [annotations.proto and http.proto](https://github.com/googleapis/googleapis/tree/master/google/api). Put these files in `src/main/proto/google/api`.
 
 # How to make contributions?
 Please read and follow the steps in the CONTRIBUTING.md.
