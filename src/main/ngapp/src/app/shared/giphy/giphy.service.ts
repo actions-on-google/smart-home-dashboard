@@ -29,11 +29,12 @@ export class GiphyService {
 
   get(searchTerm) {
     const apiLink = this.giphyApi + searchTerm;
-    if (this.apiKey === 'api-key') {
-      // Use undefined image
-      return '';
-    }
     return this.http.get(apiLink).map((response: any) => {
+      if (this.apiKey === 'api-key') {
+        // Use undefined image
+        return '';
+      }
+
       if (response.data.length > 0) {
         return response.data[0].images.original.url;
       } else {
