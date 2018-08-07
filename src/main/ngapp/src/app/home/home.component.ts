@@ -62,7 +62,8 @@ export class HomeComponent implements OnInit {
       alert('Missing data');
       return;
     }
-    this.router.navigate([`../device-list/${this.currentFileUpload.name}/${this.agentUserId}`], { relativeTo: this.route });
+    this.router.navigate([`../device-list/${this.currentFileUpload.name}/${encodeURIComponent(String(this.agentUserId))}`],
+      { relativeTo: this.route });
   }
 }
 
