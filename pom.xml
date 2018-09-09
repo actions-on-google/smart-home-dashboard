@@ -81,6 +81,7 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>jul-to-slf4j</artifactId>
 			<scope>provided</scope>
+			<version>1.7.25</version>
 		</dependency>
 
 		<dependency>
@@ -213,6 +214,7 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+			<version>1.18.2</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
