@@ -23,9 +23,6 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * entities and their relationships in the home.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
-    comments = "Source: homegraph.proto")
 public final class HomeGraphApiServiceGrpc {
 
   private HomeGraphApiServiceGrpc() {}
