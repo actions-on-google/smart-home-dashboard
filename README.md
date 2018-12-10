@@ -76,6 +76,26 @@ To build from the source files:
 1. Download the [home graph protos](https://github.com/googleapis/googleapis/tree/master/google/home/graph/v1) to `src/main/proto`
 1. Download [annotations.proto and http.proto](https://github.com/googleapis/googleapis/tree/master/google/api). Put these files in `src/main/proto/google/api`.
 
+## Build from Dockerfile
+
+Build local image:
+
+`docker build -t <docker-image-name>:<tag> .`
+
+Example:
+
+`docker build -t actions-on-google/smart-home-dashboard:latest .`
+
+## Executing with Docker
+
+Using local image:
+
+`docker run --name smart-home-dashboard -p 8080:8080 <docker-image-name>:<tag>`
+
+Example:
+
+`docker run --name smart-home-dashboard -p 8080:8080 actions-on-google/smart-home-dashboard:latest`
+
 # How to make contributions?
 Please read and follow the steps in the CONTRIBUTING.md.
 
