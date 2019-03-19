@@ -21,7 +21,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Smart Home ReportState Dashboard';
+  title = 'Smart Home Report State Dashboard';
 
   constructor() {
   }
