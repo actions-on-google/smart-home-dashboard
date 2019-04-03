@@ -76,8 +76,16 @@ To build from the source files:
 1. Download the [home graph protos](https://github.com/googleapis/googleapis/tree/master/google/home/graph/v1) to `src/main/proto`
 1. Download [annotations.proto and http.proto](https://github.com/googleapis/googleapis/tree/master/google/api). Put these files in `src/main/proto/google/api`.
 
-# How to make contributions?
-Please read and follow the steps in the CONTRIBUTING.md.
-
-# License
-See `LICENSE.md`.
+## References & Issues
++ Questions? Go to [StackOverflow](https://stackoverflow.com/questions/tagged/actions-on-google), [Assistant Developer Community on Reddit](https://www.reddit.com/r/GoogleAssistantDev/) or [Support](https://developers.google.com/actions/support/).
++ For bugs, please report an issue on Github.
++ Actions on Google [Documentation](https://developers.google.com/actions/extending-the-assistant)
+ 
+## Make Contributions
+Please read and follow the steps in the [CONTRIBUTING.md](CONTRIBUTING.md).
+ 
+## License
+See [LICENSE](LICENSE).
+ 
+## Terms
+Your use of this sample is subject to, and by using or downloading the sample files you agree to comply with, the [Google APIs Terms of Service](https://developers.google.com/terms/).
