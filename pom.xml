@@ -32,14 +32,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>${spring.boot.version}</version>
-			<!-- Exclude Tomcat so that it doesn't conflict w/ Jetty server -->
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-
-			</exclusions>
 		</dependency>
 
 		<!-- proto -->

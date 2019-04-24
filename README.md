@@ -67,11 +67,11 @@ To install on any other Java Web Server:
 
 Deploy the war artifact from `target/`
 
-To run with embedded tomcat:
+To run locally:
 
-`mvn clean package`
+`mvn clean package spring-boot:repackage`
 
-Then run `java -jar [artifact_name].jar` from `target/`
+Then run `java -jar target/[artifact_name].war`
 
 ## Build from source
 To build from the source files:
