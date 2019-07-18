@@ -21,3 +21,11 @@ body {
   margin: 0;
   font-family: Roboto, sans-serif;
 }
+
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-48 {
+  font-size: 48px
+}

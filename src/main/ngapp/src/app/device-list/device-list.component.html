@@ -20,8 +20,9 @@
       <mat-list-item *ngFor="let device of devices" style="min-height:60px"
         [ngStyle]="{'background-color':device.updated ? 'green' : '#424242' }">
 
-        <img mat-list-avatar src="{{device.giphyUrl}}" alt="{{device.name}}">
-        <h3 mat-line class='device-name'>{{device.name}}</h3>
+        <img mat-list-avatar ng-show="{{device.giphyUrl}}" src="{{device.giphyUrl}}" alt="{{device.name}}">
+        <i mat-list-avatar class="material-icons md-48 md-light" ng-show="{{!device.giphyUrl}}">{{device.icon}}</i>
+        <h3 mat-line class='device-name'>{{device.name}} ({{device.id}})</h3>
         <mat-divider></mat-divider>
 
         <mat-list-item *ngFor="let state of device.state">
@@ -42,13 +43,4 @@
     <h6 [ngStyle]="{'color': 'black'}">Response:</h6>
     <pre style='color:black'>{{debugResponse}}</pre>
   </mat-card-footer>
-
-  <style>
-    img.mat-list-avatar {
-      width: 40px;
-      height: 40px;
-      min-width: inherit;
-      border-radius: 100%;
-    }
-  </style>
 </mat-card>

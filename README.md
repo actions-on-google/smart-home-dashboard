@@ -7,7 +7,7 @@ The app can be installed to Google App Engine or any Java Web Server.
 
 Make sure to follow [this guide](https://developers.google.com/actions/smarthome/report-state) to get a service account key
 
-You can add a Giphy [API key](https://developers.giphy.com/docs/) to `giphy.service.ts` to get animated images for each device type
+You can add a Giphy [API key](https://developers.giphy.com/docs/) to `giphy.service.ts` to get animated images for each device type. Otherwise, a basic icon will show shown.
 
 ## Setup
 

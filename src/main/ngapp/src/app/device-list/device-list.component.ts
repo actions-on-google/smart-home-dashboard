@@ -18,6 +18,7 @@ import { DeviceService } from '../shared/device/device.service';
 import { GiphyService } from '../shared/giphy/giphy.service';
 import { Subscription } from 'rxjs/Subscription';
 import { ActivatedRoute, Router } from '@angular/router';
+import { getDeviceIcon } from '../device.icon';
 
 @Component({
   selector: 'app-device-list',
@@ -48,7 +49,14 @@ export class DeviceListComponent implements OnInit, OnDestroy {
           console.log('Data response', data);
           for (const device of this.devices) {
             device.state = Array.from(device.states.values());
-            this.giphyService.get(device.name).subscribe(url => device.giphyUrl = url);
+            const giphyService = this.giphyService.get(device.name);
+            if (giphyService) {
+              giphyService.subscribe(url => {
+                device.giphyUrl = url;
+              });
+            } else {
+              device.icon = getDeviceIcon(device.type);
+            }
           }
         });
       }
@@ -69,7 +77,14 @@ export class DeviceListComponent implements OnInit, OnDestroy {
         console.log('Data response', data);
         for (const device of this.devices) {
           device.state = Array.from(device.states.values());
-          this.giphyService.get(device.name).subscribe(url => device.giphyUrl = url);
+          const giphyService = this.giphyService.get(device.name);
+          if (giphyService) {
+            giphyService.subscribe(url => {
+              device.giphyUrl = url;
+            });
+          } else {
+            device.icon = getDeviceIcon(device.type);
+          }
         }
       });
     }
