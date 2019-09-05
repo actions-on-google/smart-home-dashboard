@@ -120,6 +120,7 @@ public class HomeGraphController implements Serializable {
 			device.setId(d.getId());
 			device.setType(d.getType().substring(d.getType().lastIndexOf('.') + 1));
 			device.setName(d.getName().getName());
+			device.setNicknames(d.getName().getNicknamesList());
 			deviceList.add(device);
 		}
 		deviceCache.put(agentUserId, deviceList);

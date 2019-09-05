@@ -22,7 +22,8 @@
 
         <img mat-list-avatar ng-show="{{device.giphyUrl}}" src="{{device.giphyUrl}}" alt="{{device.name}}">
         <i mat-list-avatar class="material-icons md-48 md-light" ng-show="{{!device.giphyUrl}}">{{device.icon}}</i>
-        <h3 mat-line class='device-name'>{{device.name}} ({{device.id}})</h3>
+        <h3 mat-line class='device-name'>{{device.name}} ({{device.nicknames.join(',')}}) ({{device.id}})</h3>
+
         <mat-divider></mat-divider>
 
         <mat-list-item *ngFor="let state of device.state">
