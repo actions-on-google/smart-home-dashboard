@@ -51,7 +51,6 @@ gcloud components update
 ```
 
 1. Run `mvn compile`
-    1. You should see the file `target/appengine-staging/app.yaml`
 1. Deploy the sample with `mvn appengine:deploy`
     1. It will be available at `http://<your-project-id>.appspot.com`
     1. You can stream logs from the command line by running: `gcloud app logs tail -s default`
