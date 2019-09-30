@@ -11,7 +11,10 @@ You can add a Giphy [API key](https://developers.giphy.com/docs/) to `giphy.serv
 
 ## Setup
 
-### Build client
+1. Run `mvn compile`. This will compile both the Java project and the web
+frontend.
+
+### Build client (separately)
 
 First you need to build the web frontend that you will interact with:
 
@@ -22,7 +25,7 @@ npm run build
 # Built files will be added in src/main/webapp
 ```
 
-### Build server
+### Build and deploy server
 
 #### Using Google App Engine
 To set up your instance:
@@ -50,7 +53,6 @@ gcloud components install app-engine-java
 gcloud components update
 ```
 
-1. Run `mvn compile`
 1. Deploy the sample with `mvn appengine:deploy`
     1. It will be available at `http://<your-project-id>.appspot.com`
     1. You can stream logs from the command line by running: `gcloud app logs tail -s default`

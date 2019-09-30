@@ -2,6 +2,7 @@
 /target
 # Compiled files
 /src/main/webapp
+src/main/ngapp/node/
 # Pulled-in dependencies
 /src/main/ngapp/node_modules
 /src/main/ngapp/package-lock.json
