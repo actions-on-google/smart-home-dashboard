@@ -5,7 +5,7 @@ data that is stored in it.
 
 The app can be installed to Google App Engine or any Java Web Server.
 
-Make sure to follow [this guide](https://developers.google.com/actions/smarthome/report-state) to get a service account key
+Make sure to follow [this guide](https://developers.google.com/assistant/smarthome/develop/report-state) to get a service account key
 
 You can add a Giphy [API key](https://developers.giphy.com/docs/) to `giphy.service.ts` to get animated images for each device type. Otherwise, a basic icon will show shown.
 
@@ -78,9 +78,9 @@ To build from the source files:
 1. Download [annotations.proto and http.proto](https://github.com/googleapis/googleapis/tree/master/google/api). Put these files in `src/main/proto/google/api`.
 
 ## References & Issues
-+ Questions? Go to [StackOverflow](https://stackoverflow.com/questions/tagged/actions-on-google), [Assistant Developer Community on Reddit](https://www.reddit.com/r/GoogleAssistantDev/) or [Support](https://developers.google.com/actions/support/).
++ Questions? Go to [StackOverflow](https://stackoverflow.com/questions/tagged/actions-on-google), [Assistant Developer Community on Reddit](https://www.reddit.com/r/GoogleAssistantDev/) or [Support](https://developers.google.com/assistant/support).
 + For bugs, please report an issue on Github.
-+ Actions on Google [Documentation](https://developers.google.com/actions/extending-the-assistant)
++ Actions on Google [Documentation](https://developers.google.com/assistant)
  
 ## Make Contributions
 Please read and follow the steps in the [CONTRIBUTING.md](CONTRIBUTING.md).
