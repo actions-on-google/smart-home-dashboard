@@ -34,16 +34,15 @@ import com.google.homegraph.dashboard.service.StorageService;
 
 @Controller
 @Scope(value="session")
-public class UploadController implements Serializable{
+public class UploadController implements Serializable {
 
 	private static final long serialVersionUID = 5546148932202075489L;
 	private static Logger log = Logger.getLogger("UploadController");
-	@Autowired
-	private StorageService storageService;
 
 	@PostMapping("/upload")
 	@CrossOrigin
 	public ResponseEntity<String> handleFileUpload(@RequestParam("file") final MultipartFile file) {
+		StorageService storageService = StorageService.getInstance();
 		log.debug("Uploading file");
 		try {
 			log.debug("storing file " + file.getOriginalFilename());

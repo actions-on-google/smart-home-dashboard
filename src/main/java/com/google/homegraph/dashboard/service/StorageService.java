@@ -44,8 +44,18 @@ public class StorageService implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private static Logger log = LoggerFactory.getLogger("StorageService");
+	private static StorageService instance;
 
 	private Map<String, byte[]> inMemoryStore = new HashMap<>();
+
+	private StorageService() {}
+
+	public static StorageService getInstance() {
+		if (instance == null) {
+			instance = new StorageService();
+		}
+		return instance;
+	}
 
 	public void storeInMemory(MultipartFile file) {
 		try {
@@ -61,10 +71,8 @@ public class StorageService implements Serializable{
 		if (inMemoryStore.containsKey(filename)) {
 			log.debug("Found file in memory");
 			return new ByteArrayInputStream(inMemoryStore.get(filename));
-
 		} else {
-			log.debug("File is not in memory..");
-
+			log.debug("File is not in memory");
 			return null;
 		}
 	}

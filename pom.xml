@@ -55,6 +55,13 @@
 			<artifactId>grpc-auth</artifactId>
 			<version>1.9.0</version>
 		</dependency>
+		<!-- https://github.com/googleapis/google-api-java-client-services/tree/master/clients/google-api-services-homegraph/v1 -->
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-homegraph</artifactId>
+			<version>v1-rev20191106-1.30.3</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/io.netty/netty-tcnative-boringssl-static -->
 		<dependency>
 			<groupId>io.netty</groupId>
@@ -153,11 +160,6 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.googlecode.objectify</groupId>
-			<artifactId>objectify</artifactId>
-			<version>5.1.22</version>
 		</dependency>
 
 		<dependency>
@@ -259,13 +261,6 @@
 			</plugin>
 
 			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>3.1.0</version>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>org.xolstice.maven.plugins</groupId>
 				<artifactId>protobuf-maven-plugin</artifactId>
 				<version>0.5.0</version>
@@ -298,7 +293,7 @@
 			<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
-					<version>3.0.0</version>
+					<version>3.1.0</version>
 					<configuration>
 							<excludes>
 									<exclude>ngapp/**</exclude>

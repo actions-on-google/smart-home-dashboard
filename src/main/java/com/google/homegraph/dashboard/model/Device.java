@@ -20,13 +20,15 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Device {
 	private String id;
 	private String type;
 	private String name;
 	private List<String> nicknames = new ArrayList<>();
-	private Map<String, String> statesCache = new HashMap<>();
+	private Map<String, Object> statesCache = new HashMap<>();
 	private Collection<String> states;
 	private boolean updated;
 
@@ -39,7 +41,10 @@ public class Device {
 	}
 
 	public Collection<String> getStates() {
-		 states=statesCache.values();
+		 states = statesCache.entrySet()
+				 .parallelStream()
+				 .map(entry -> entry.getValue().toString())
+				 .collect(Collectors.toList());
 		 return states;
 	}
 
@@ -59,11 +64,11 @@ public class Device {
 		this.type = type;
 	}
 
-	public Map<String, String> getStatesCache() {
+	public Map<String, Object> getStatesCache() {
 		return statesCache;
 	}
 
-	public void setStatesCache(Map<String, String> states) {
+	public void setStatesCache(Map<String, Object> states) {
 		this.statesCache = states;
 	}
 
