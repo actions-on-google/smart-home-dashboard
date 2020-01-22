@@ -29,7 +29,6 @@ public class Device {
 	private String name;
 	private List<String> nicknames = new ArrayList<>();
 	private Map<String, Object> statesCache = new HashMap<>();
-	private Collection<String> states;
 	private boolean updated;
 
 	public boolean isUpdated() {
@@ -38,14 +37,6 @@ public class Device {
 
 	public void setUpdated(boolean updated) {
 		this.updated = updated;
-	}
-
-	public Collection<String> getStates() {
-		 states = statesCache.entrySet()
-				 .parallelStream()
-				 .map(entry -> entry.getValue().toString())
-				 .collect(Collectors.toList());
-		 return states;
 	}
 
 	public String getId() {
