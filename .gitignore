@@ -6,5 +6,6 @@ src/main/ngapp/node/
 # Pulled-in dependencies
 /src/main/ngapp/node_modules
 /src/main/ngapp/package-lock.json
+.gradle/
 .idea/
 .settings/
