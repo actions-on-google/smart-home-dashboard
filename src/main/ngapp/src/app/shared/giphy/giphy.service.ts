@@ -31,7 +31,7 @@ export class GiphyService {
     const apiLink = this.giphyApi + searchTerm;
     if (this.apiKey === 'api-key') {
       // Use undefined image
-      return '';
+      return undefined;
     }
     return this.http.get(apiLink).map((response: any) => {
       if (response.data.length > 0) {

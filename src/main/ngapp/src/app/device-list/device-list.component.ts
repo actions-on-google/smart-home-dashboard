@@ -48,7 +48,9 @@ export class DeviceListComponent implements OnInit, OnDestroy {
           this.devices = data;
           console.log('Data response', data);
           for (const device of this.devices) {
-            device.state = Array.from(device.states.values());
+            device.state = Object.entries(device.statesCache).map(([k, v]) => {
+              return `${k}: ${JSON.stringify(v)}`
+            })
             const giphyService = this.giphyService.get(device.name);
             if (giphyService) {
               giphyService.subscribe(url => {
@@ -76,7 +78,9 @@ export class DeviceListComponent implements OnInit, OnDestroy {
         this.debugDelta = data.debugDelta;
         console.log('Data response', data);
         for (const device of this.devices) {
-          device.state = Array.from(device.states.values());
+          device.state = Object.entries(device.statesCache).map(([k, v]) => {
+            return `${k}: ${JSON.stringify(v)}`
+          })
           const giphyService = this.giphyService.get(device.name);
           if (giphyService) {
             giphyService.subscribe(url => {
