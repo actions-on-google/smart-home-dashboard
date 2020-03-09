@@ -166,9 +166,13 @@ public class HomeGraphController implements Serializable {
 						!device.getStatesCache().get(state.getKey()).equals(state.getValue())) {
 					// This state has changed!
 					device.setUpdated(true);
-					delta.append(state).append(" | ");
-					device.getStatesCache().put(state.getKey(), state.getValue());
+					delta
+							.append(state.getKey())
+							.append(": ")
+							.append(state.getValue().toString())
+							.append(" | ");
 				}
+				device.getStatesCache().put(state.getKey(), state.getValue());
 			}
 		}
 		response.setDebugDelta(delta.toString());
