@@ -18,8 +18,8 @@ package com.google.homegraph.dashboard.controller;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.http.HttpStatus;
@@ -37,7 +37,7 @@ import com.google.homegraph.dashboard.service.StorageService;
 public class UploadController implements Serializable {
 
 	private static final long serialVersionUID = 5546148932202075489L;
-	private static Logger log = Logger.getLogger("UploadController");
+	private static Logger log = LoggerFactory.getLogger("UploadController");
 
 	@PostMapping("/upload")
 	@CrossOrigin

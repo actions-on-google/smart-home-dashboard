@@ -43,8 +43,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-import org.apache.log4j.Logger;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -59,7 +60,7 @@ public class HomeGraphController implements Serializable {
 	private static final long serialVersionUID = -7587398671809190089L;
 	private static final String HOMEGRAPH_SCOPE = "https://www.googleapis.com/auth/homegraph";
 
-	private static Logger log = Logger.getLogger("HomeGraphController");
+	private static Logger log = LoggerFactory.getLogger("HomeGraphController");
 
 	private String file;
 
